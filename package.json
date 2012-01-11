@@ -1,5 +1,5 @@
 {
-  "name": "lessDoc",
+  "name": "lessdoc",
   "description": "Let your less stylesheets document themselves",
   "keywords": [
     "css",
@@ -8,7 +8,7 @@
   ],
   "author": "Adam Solove <adam@webs.com>",
   "version": "0.0.1",
-  "main": "./lib/less/index",
+  "main": "./lib/lessdoc/index",
   "engines": {
     "node": ">=0.4.0"
   },
@@ -16,9 +16,9 @@
     "less": "~1.1.5"
   },
   "devDependencies": {},
-  "homepage": "http://github.com/websdotcom/lessDoc",
+  "homepage": "http://github.com/websdotcom/lessdoc",
   "repository": {
     "type": "git",
-    "url": "https://githib.com/websdotcom/lessDoc.git"
+    "url": "https://github.com/websdotcom/lessdoc.git"
   }
 }
