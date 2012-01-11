@@ -1,0 +1,24 @@
+{
+  "name": "lessDoc",
+  "description": "Let your less stylesheets document themselves",
+  "keywords": [
+    "css",
+    "lesscss",
+    "documentation"
+  ],
+  "author": "Adam Solove <adam@webs.com>",
+  "version": "0.0.1",
+  "main": "./lib/less/index",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "dependencies": {
+    "less": "~1.1.5"
+  },
+  "devDependencies": {},
+  "homepage": "http://github.com/websdotcom/lessDoc",
+  "repository": {
+    "type": "git",
+    "url": "https://githib.com/websdotcom/lessDoc.git"
+  }
+}
