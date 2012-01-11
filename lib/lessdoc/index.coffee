@@ -1,12 +1,12 @@
 tree = require("less").tree
 
-lessDocMethods = 
+lessdocMethods = 
   Alpha: () ->
-    "#{method('alpha')}#{parens(keyword('opacity') + equals() + this.value.toLessDoc())}"
+    "#{method('alpha')}#{parens(keyword('opacity') + equals() + this.value.toLessdoc())}"
   Anonymous: () ->
     this.value
   Call: () ->
-    args = this.args.map((arg) -> arg.toLessDoc).join(", ")
+    args = this.args.map((arg) -> arg.toLessdoc).join(", ")
     "#{method(this.name)}#{parens(args)}"
   Comment: () ->
     this.value
@@ -17,20 +17,20 @@ lessDocMethods =
 
 # Mix our html methods into the less node classes
 for own name, constructor of tree
-  constructor.toLessDoc = lessDocMethods[name] || lessDocMethods.default
+  constructor.toLessdoc = lessdocMethods[name] || lessdocMethods.default
 
 # Syntax highlighting helpers
 method = (name) ->
-  "<span class='lessDoc-method'>#{s}</span>";
+  "<span class='lessdoc-method'>#{s}</span>";
 
 parens = (s) ->
-  "<span class='lessDoc-paren'>(</span>#{s}<span class='lessDoc-paren'>)</span>";
+  "<span class='lessdoc-paren'>(</span>#{s}<span class='lessdoc-paren'>)</span>";
 
 equals = (string) ->
   " = "
   
 number = (n) ->
-  "<span class='lessDoc-number'>#{n}</span>"
+  "<span class='lessdoc-number'>#{n}</span>"
     
 linkTo = (path) ->
   "<a href='#{path}'>#{path}</a>"
